@@ -2,15 +2,32 @@ pipeline {
     agent any
 
     stages {
-        stage('KHOEM') {
+        stage('Test Preparation') {
             steps {
-                echo 'Hello from Jenkinsfile in Organization Test.'
+                echo 'Preparing for testing...'
+                // You can add commands here to set up your testing environment
             }
         }
-        stage('RADOM') {
+
+        stage('Run Tests') {
             steps {
-                echo 'Hi from Jenkinsfile in Organization Test.'
+                echo 'Running tests...'
+                // Add commands here to run your tests (e.g., running automated tests)
             }
+        }
+
+        stage('Publish Test Results') {
+            steps {
+                echo 'Publishing test results...'
+                // Add commands here to publish test results or generate test reports
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Testing completed.'
+            // You can perform additional actions after the testing stage here
         }
     }
 }
