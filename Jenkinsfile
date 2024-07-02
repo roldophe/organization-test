@@ -2,12 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('KHOEM') {
             steps {
                 echo 'Hello from Jenkinsfile in Organization Test.'
             }
         }
-        stage('Hi') {
+        stage('RADOM') {
             steps {
                 echo 'Hi from Jenkinsfile in Organization Test.'
             }
